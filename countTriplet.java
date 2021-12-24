@@ -26,12 +26,6 @@ public class countTriplet {
                  {
                     count+=end-start;
                     
-                    System.out.println(" index :  "+i+"  start : "+start +"  end : "+end );
-                    System.out.println("elements are start end and i resp : "+arr[start]+arr[end]+arr[i]);
-
-                    System.out.println("elements are start end and i resp : "+arr[start]+arr[end]+arr[i]);
-                    System.out.println(" current sum : "+currentSum);
-                    System.out.println("current count : "+count);
                    
                     start++;
 
@@ -44,36 +38,7 @@ public class countTriplet {
 
                 }
             }
-            // System.out.println("arr : "+Arrays.toString(arr));
-
-            // System.out.println(" index :  "+i+"  start : "+start +"  end : "+end );
-            
            
-            // System.out.println("..");
-            // while (start<end) {
-            //     long currentSum=arr[start]+arr[end]+arr[i];
-            //     if (currentSum>=sum) {
-            //         end--;
-            //         continue;
-
-
-                    
-            //     }
-            //     {
-                    
-            //     ++count;
-               
-                // System.out.println("elements are start end and i resp : "+arr[start]+arr[end]+arr[i]);
-                // System.out.println(" current sum : "+currentSum);
-                // System.out.println("current count : "+count);
-
-               
-                
-            //     }
-
-
-                
-            // }
 
 
         }
@@ -107,3 +72,37 @@ public class countTriplet {
     }
 
 }
+class Test
+{
+    static int arr[] = new int[]{5, 1, 3, 4, 7};
+    
+    static int countTriplets(int n, int sum)
+    {
+        // Initialize result
+        int ans = 0;
+     
+        // Fix the first element as A[i]
+        for (int i = 0; i < n-2; i++)
+        {
+           // Fix the second element as A[j]
+           for (int j = i+1; j < n-1; j++)
+           {
+               // Now look for the third number
+               for (int k = j+1; k < n; k++)
+                   if (arr[i] + arr[j] + arr[k] < sum)
+                       ans++;
+           }
+        }
+     
+        return ans;
+    }
+    
+    // Driver method to test the above function
+    public static void main(String[] args) 
+    {
+        int sum = 12; 
+        System.out.println(countTriplets(arr.length, sum));
+    }
+}
+
+
