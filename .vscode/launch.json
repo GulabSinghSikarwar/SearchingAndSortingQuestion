@@ -1,0 +1,104 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch FindPairGivenDifference",
+            "request": "launch",
+            "mainClass": "FindPairGivenDifference",
+            "projectName": "cp_93c71f1a"
+        },
+        {
+            "type": "java",
+            "name": "Launch FinfdAllquadrupleSum",
+            "request": "launch",
+            "mainClass": "FinfdAllquadrupleSum",
+            "projectName": "cp_93c71f1a"
+        },
+        {
+            "type": "java",
+            "name": "Launch ProductArrayPuzzle",
+            "request": "launch",
+            "mainClass": "ProductArrayPuzzle",
+            "projectName": "cp_93c71f1a"
+        },
+        {
+            "type": "java",
+            "name": "Launch QuickSort",
+            "request": "launch",
+            "mainClass": "QuickSort",
+            "projectName": "cp_93c71f1a"
+        },
+        {
+            "type": "java",
+            "name": "Launch RepeatingElement",
+            "request": "launch",
+            "mainClass": "RepeatingElement",
+            "projectName": "cp_93c71f1a"
+        },
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "cp_93c71f1a"
+        },
+        {
+            "type": "java",
+            "name": "Launch ZeroSumSubarrays",
+            "request": "launch",
+            "mainClass": "ZeroSumSubarrays",
+            "projectName": "cp_93c71f1a"
+        },
+        {
+            "type": "java",
+            "name": "Launch adjacentDifferByK",
+            "request": "launch",
+            "mainClass": "adjacentDifferByK",
+            "projectName": "cp_93c71f1a"
+        },
+        {
+            "type": "java",
+            "name": "Launch countTriplet",
+            "request": "launch",
+            "mainClass": "countTriplet",
+            "projectName": "cp_93c71f1a"
+        },
+        {
+            "type": "java",
+            "name": "Launch mergeSortedArray",
+            "request": "launch",
+            "mainClass": "mergeSortedArray",
+            "projectName": "cp_93c71f1a"
+        },
+        {
+            "type": "java",
+            "name": "Launch mojorityElements",
+            "request": "launch",
+            "mainClass": "mojorityElements",
+            "projectName": "cp_93c71f1a"
+        },
+        {
+            "type": "java",
+            "name": "Launch sticklerThief",
+            "request": "launch",
+            "mainClass": "sticklerThief",
+            "projectName": "cp_93c71f1a"
+        },
+        {
+            "type": "java",
+            "name": "Launch lastOccurrencesOfX",
+            "request": "launch",
+            "mainClass": "dsaProblems.lastOccurrencesOfX"
+        }
+    ]
+}
