@@ -5,7 +5,7 @@ import java.util.*;
 public class ProductArrayPuzzle {
 
     public static long[] productExceptSelf(int arr[], int n) {
-        System.out.println("fun call ");
+        // System.out.println("fun call ");
         // code here
         long[] p = new long[n];
         int zeroCount=0;
@@ -26,11 +26,11 @@ public class ProductArrayPuzzle {
 
             }
         }
-        System.out.println(" zero count : "+zeroCount);
+        // System.out.println(" zero count : "+zeroCount);
         
        
         if (zeroCount>1) {
-            System.out.println("inside 2 ");
+            // System.out.println("inside 2 ");
             totalSum=0;
             Arrays.fill(p, 0);
             return p;
