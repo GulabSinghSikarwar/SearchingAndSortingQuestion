@@ -34,6 +34,10 @@ public class setBitSort {
           
 
         }
+
+        // Arrays.sort(arr, (a, b) -> -Integer.compare
+        // (Integer.bitCount(a), Integer.bitCount(b)));
+
         return count;
 
     }
