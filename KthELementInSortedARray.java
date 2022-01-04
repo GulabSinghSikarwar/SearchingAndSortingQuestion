@@ -1,5 +1,4 @@
 import java.util.*;
-import java.lang.*;
 import java.io.*;
 public class KthELementInSortedARray {
     
@@ -67,7 +66,7 @@ class GFG {
 
 // User function Template for Java
 
-class Solution {
+    class  Solution {
     public long kthElement(int arr1[], int arr2[], int n, int m, int k) {
         int st1 = 0, st2 = 0;
         return (kth(arr1, arr2, n, m, k, st1, st2));

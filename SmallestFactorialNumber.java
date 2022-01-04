@@ -51,23 +51,23 @@ while(low<high)
 
     public static void main(String args[]) {
 
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("enter t");
+            int t = sc.nextInt();
 
-        System.out.println("enter t");
-        int t = sc.nextInt();
+            while (t-- > 0) {
+                System.out.println("enter n");
 
-        while (t-- > 0) {
-            System.out.println("enter n");
+                int n = sc.nextInt();
 
-            int n = sc.nextInt();
+                long startingTime = System.currentTimeMillis();
 
-            long startingTime = System.currentTimeMillis();
+                System.out.println(findNum(n));
+                long endingTime = System.currentTimeMillis();
 
-            System.out.println(findNum(n));
-            long endingTime = System.currentTimeMillis();
+                System.out.println("execution time : " + (startingTime - endingTime));
 
-            System.out.println("execution time : " + (startingTime - endingTime));
-
+            }
         }
     }
 

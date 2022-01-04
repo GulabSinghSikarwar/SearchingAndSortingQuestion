@@ -5,8 +5,6 @@ public class FinfdAllquadrupleSum {
     public static ArrayList<ArrayList<Integer>> fourSum(int[] arr, int k) {
         // code here
         ArrayList<ArrayList<Integer>> list = new ArrayList<>();
-        Set<ArrayList>setList=new HashSet<>();
-
         Arrays.sort(arr);
 
         for (int i = 0; i < arr.length - 3; i++) {

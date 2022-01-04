@@ -1,5 +1,4 @@
 import java.io.*;
-import java.util.*;
 
 public class mojorityElements {
     static int majorityElement(int a[], int size)
