@@ -72,6 +72,7 @@ class ParathaSolution {
         int high = Integer.MAX_VALUE;
 
         int result = Integer.MAX_VALUE;
+        
 
         while (low <= high) {
             int mid = (low + high) / 2;
