@@ -1,4 +1,4 @@
-public class LL {
+public class removeDuplicates {
     node head;
 
     class node {
@@ -89,8 +89,8 @@ public class LL {
         head = head.next;
 
     }
-
-    public void removeLast() {
+   
+public void removeLast() {
         if (head == null) {
             System.out.println("LIST IS EMPTY ");
         }
@@ -111,66 +111,14 @@ public class LL {
         return;
 
     }
-
-    public void removeDuplicatesSorted(){
-        node temp=head;
-
-        while(temp.next!=null)
-        {
-            if(temp.next.data==temp.data)
-            {
-
-                node current=temp;
-
-                while(temp.next.data==current.data)
-                {
-                    temp=temp.next;
-
-
-                }
-                current.next=temp.next;
-
-
-            }
-            temp=temp.next;
-            
-
-
-
-        }
-
-    }
-
     public static void main(String[] args) {
-
-        LL ll = new LL();
-        // myLinkedList.addFirst(1);
-
-        // myLinkedList.printList();
-
-        // System.out.println();
-        // myLinkedList.addFirst(2);
-        // myLinkedList.addFirst(3);
-        // myLinkedList.addFirst(4);
-        // myLinkedList.addFirst(5);
-        // myLinkedList.addFirst(6);
-        // myLinkedList.printList();
-        // System.out.println();
-        // myLinkedList.removeFirst();
-        // // removed first i.e 6
-        // System.out.println();
-        // myLinkedList.printList();
-        // System.out.println();
-        // myLinkedList.removeLast();
-        // // removed last i.e 1
-
-        ll.addFirst(5);
-        ll.addFirst(4);
-        ll.addFirst(2);
-        ll.addFirst(2);
-        ll.printList();
-        ll.removeDuplicatesSorted();
-        ll.printList();
+        
+        
+        
 
     }
-}
+
+
+    }
+
+

@@ -60,12 +60,23 @@ class Solution {
     
         Node fast =head;
         Node slow=head;
+        boolean loop = false;
+
         while (slow!=null && fast!=null && fast.next!=null) {
             
             fast=fast.next.next;
             slow=slow.next;
+            if(fast==slow)
+            {
+              loop = true;
+                break;
+
+            }
 
         }
+        if(loop)
+        return true;
+        
        
 
 
