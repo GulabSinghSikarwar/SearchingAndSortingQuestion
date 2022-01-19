@@ -157,11 +157,12 @@ public class mergeSortOnLinkedList{
         
         Node temp =head;
         while(temp!=null)
-        temp=temp.next
+        temp=temp.next;
 
 
 
-        return null;
+
+        return temp;
 
     }
 }
