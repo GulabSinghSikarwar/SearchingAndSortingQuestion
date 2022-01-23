@@ -21,6 +21,7 @@ public class DeleteNodeHavingSmallerValyeThanFollowing {
         // your code here
         head=reverse(head);
         
+        
          Node curr=head;
             while (curr!=null && curr.next!=null) {
                 Node next=curr.next;
