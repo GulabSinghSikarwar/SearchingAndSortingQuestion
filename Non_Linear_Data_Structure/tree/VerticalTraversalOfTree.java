@@ -29,27 +29,26 @@ public class VerticalTraversalOfTree {
 
     ArrayList<Integer> list = new ArrayList<>();
 
-public static void getTopView(Node root,Values values,int level,ArrayList<Integer> list){
-    if(root==null)
-    return;
+    public static void getTopView(Node root, Values values, int level, ArrayList<Integer> list) {
+        if (root == null)
+            return;
 
-    getTopView(root.left,values,level-1,list);
+        getTopView(root.left, values, level - 1, list);
 
-    if(level>values.max)
-    {
-        list.add(root.data)
-        values.max=level;
+        if (level > values.max) {
+            list.add(root.data);
+
+            values.max = level;
+        }
+        if (level < values.min) {
+            list.add(root.data);
+
+            values.min = level;
+
+        }
+        getTopView(root.right, values, level + 1, list);
+
     }
-    if (level<values.min) {
-        list.add(root.data);
-
-        values.min=level;
-
-    }
-    getTopView(root.right, values, level+1,list);
-
-
-}
 
     public ArrayList<Integer> bottomView(Node root) {
         // Code here
@@ -60,6 +59,7 @@ public static void getTopView(Node root,Values values,int level,ArrayList<Intege
         TreeMap<Integer, Integer> map = new TreeMap<>();
 
         bottom(root, level, map);
+
         for (int key : map.keySet()) {
             list.add(map.get(key));
         }
