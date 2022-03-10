@@ -66,10 +66,8 @@ public class preAndSucc {
         }
         if(root.data==key)
         {
-            ans=root;
-            System.out.println( " ANS FOUND "+  ans.data);
-            return ;
-
+           git status 
+           
         }
          else if(root.data>key)
         {
