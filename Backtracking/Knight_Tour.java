@@ -10,38 +10,69 @@ public class Knight_Tour {
         int moves = 1;
         int row = 0;
         int col = 0;
+        count = 0;
+
+        for (int i = 0; i < visited.length; i++) {
+            Arrays.fill(maze[i], 0);
+        }
 
         printTour(maze, moves, row, col, visited);
+        System.out.println(count);
 
     }
 
-    public static void printTour(int[][] maze, int moves, iny row, int col, boolean[][] visited) {
-        if (moves == Math.pow(maze.length, 2)) {
+    public static final int[] rows = { 2, 1, -1, -2, -2, -1, 1, 2, 2 };
+    public static final int[] cols = { 1, 2, 2, 1, -1, -2, -2, -1, 1 };
+    public static int count;
+
+    private static boolean isValid(int x, int y, int N) {
+        if (x < 0 || y < 0 || x >= N || y >= N) {
+            return false;
+        }
+
+        return true;
+    }
+
+    public static void printTour(int[][] maze, int moves, int row, int col, boolean[][] visited) {
+
+        // System.out.println("row : "+row +" col : "+col + " Moves : "+moves);
+
+        maze[row][col] = moves;
+
+        if (moves >= maze.length * maze.length) {
             int n = maze.length;
-            for (int i = 0; i < visited.length; i++) {
+            for (int i = 0; i < n; i++) {
                 System.out.println(Arrays.toString(maze[i]));
             }
+            count++;
+
+            maze[row][col] = 0;
+            System.out.println();
             return;
 
         }
 
-        int directions[][] = {
-                { row - 2, col + 1 }, { row - 1, col + 2 },
-                { row + 1, col - 2 }, { row + 2, col + 1 },
+        // maze[row][col]=moves;
+        for (int i = 0; i < rows.length; i++) {
+            int dx = rows[i] + row;
+            int dy = cols[i] + col;
+            int n = maze.length;
 
-                { row - 2, col - 1 }, { row - 1, col - 2 },
-                { row + 1, col - 2 }, { row + 2, col - 1 }
+            if (isValid(dx, dy, n) && maze[dx][dy] == 0) {
+                printTour(maze, moves + 1, dx, dy, visited);
+            }
 
-        };
-        for (int i = 0; i < directions.length; i++) {
-            int dx=directions[i][0];
-            
-            int dy=directions[i][1];
-            
-
-            
         }
 
+        maze[row][col] = 0;
+
+        return;
+
+    }
+
+    public static void main(String[] args) {
+        int n = 8;
+        tour(n);
     }
 
 }
